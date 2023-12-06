@@ -3,11 +3,13 @@ This is the repository containing docs and code related to the dual arm mobile m
 
 # Docker container 
 ## Description 
+
 The docker container contains a built ROS workspace with all the ROS packages running on the computer on the dual arm manipulator. It is useful to have this on a local machine for two reasons. 
 1. To access the gazebo sim of the robot + moveit 2. To run moveit on the localmachine using RVIz 
 
 
 ##Usage 
+
 The instructions below are tested for Ubuntu 20.04
 Clone the repository 
 ```
