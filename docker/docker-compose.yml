@@ -1,0 +1,25 @@
+version: "2.4"
+services:
+  docker_jango:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: docker_jango
+    tty: true
+    cap_add:
+      - SYS_NICE
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+    ulimits:
+      rtprio: 99
+      rttime: -1
+      memlock: 8428281856
+    network_mode: host
+    privileged: true
+    devices:
+    - /dev:/dev
+    runtime: nvidia
+    volumes:
+      # - ../../calibration:/root/git/calibration
+      - ../src:/root/jango_ws/src/
+
